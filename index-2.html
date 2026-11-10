@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handmade Quilts for Sale</title>
+  <meta name="description" content="Handmade quilts for sale. Browse our collection and get in touch to purchase.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand">Stitched &amp; Stored <span>Quilts</span></a>
+      <nav aria-label="Main">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <h1>Handmade quilts, made to be used and loved</h1>
+        <p>Every quilt in our collection is one of a kind. Browse what's available and reach out to take one home.</p>
+        <a class="btn" href="#shop">Browse quilts</a>
+      </div>
+    </section>
+
+    <section id="shop" class="wrap">
+      <h2>Quilts for sale</h2>
+
+      <div class="controls">
+        <input type="search" id="search" placeholder="Search quilts…" aria-label="Search quilts">
+        <select id="size" aria-label="Filter by size">
+          <option value="all">All sizes</option>
+        </select>
+        <select id="sort" aria-label="Sort quilts">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="name">Name (A–Z)</option>
+        </select>
+        <label class="check"><input type="checkbox" id="hideSold"> Hide sold</label>
+      </div>
+
+      <p id="count" class="count" aria-live="polite"></p>
+      <div id="grid" class="grid"></div>
+      <p id="empty" class="empty" hidden>No quilts match your search. Try clearing a filter.</p>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap narrow">
+        <h2>About our quilts</h2>
+        <p>Tell visitors your story here: who makes the quilts, how long you've been quilting, and what materials you use. A couple of warm sentences go a long way.</p>
+        <p>All quilts are machine washable on a gentle cycle unless noted. Sizes are approximate.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap narrow">
+      <h2>Interested in a quilt?</h2>
+      <p>Click “Inquire” on any quilt to send us an email about it, or reach us directly:</p>
+      <ul class="contact-list">
+        <li>Email: <a id="emailLink" href="#"></a></li>
+        <li>Phone: <span id="phoneText"></span></li>
+        <li>Pickup / shipping: <span id="shipText"></span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© <span id="year"></span> Stitched &amp; Stored Quilts</div>
+  </footer>
+
+  <!-- Detail dialog -->
+  <dialog id="modal" aria-labelledby="mTitle">
+    <button class="close" id="closeModal" aria-label="Close">&times;</button>
+    <div class="modal-body">
+      <div id="mImage" class="modal-img"></div>
+      <div class="modal-info">
+        <h3 id="mTitle"></h3>
+        <p class="price" id="mPrice"></p>
+        <p id="mDesc"></p>
+        <dl id="mDetails"></dl>
+        <a id="mInquire" class="btn" href="#">Inquire about this quilt</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="quilts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
